@@ -1,0 +1,13 @@
+[openai]
+api_key = 'YOUR_API_KEY'
+
+[openai.user]
+prefix = 'Reply with only: `ok`, ignore the following: `{}`'
+
+[openai.engine]
+model = 'gpt-3.5-turbo'
+
+#change for chosen (engine) model: https://openai.com/pricing
+[openai.engine.pricing] #per 1K tokens
+input = 0.0015 #$
+output = 0.002 #$
