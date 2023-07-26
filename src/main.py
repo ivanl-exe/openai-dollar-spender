@@ -1,5 +1,5 @@
 from chat import Chat
-from time import time
+from time import time, sleep
 from math import ceil
 from util.math import carpet
 from util.console import flush
@@ -10,7 +10,13 @@ if __name__ == '__main__':
     total = 0
     while total < 1: 
         start = time()
-        cost = chat.waste(n = 8000)
+        cost = -1
+        while cost == -1:
+            try:
+                cost = chat.waste(n = 8000)
+            except Exception as e:
+                print(e)
+                sleep(1)
         finish = time()
         total += cost
         duration = finish - start
